@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Islamabad Read Estate Price Prediction</title>
+        <meta name = "description" content="Tool to predict real estate prices in Islamabad, Pakistan">
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;800&display=swap" rel="stylesheet">
+		<link href = "style.css" rel = "stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div class="column-left">
+                <img src="images\isl_img.jpg" alt="View of Islamabad from Daman-e-koh">
+                <h1> Real Estate in Islamabad</h1>
+                <p> Islamabad, the capital city of Pakistan, is one of the most beautiful cities in South Asia.</p>
+                <h2>Looking to move there? Use this tool to predict the cost of buying real estate in the city.</h2>
+            </div>
+            <div class="column-right">
+                <form class="input-form" onsubmit="predictPrice()">
+                    <h3>Area (in Square Feet)</h3>
+                    <input type="text" id="area_sqft" name="area_sqft" value="1000"><br>
+                    <h3>Bedrooms</h3>
+                    <div class="num-choice">
+                        <input type="radio" id="bed1" name="beds" value="1">
+                        <label for="bed1">1</label>
+                        <input type="radio" id="bed2" name="beds" value="2">
+                        <label for="bed2">2</label>
+                        <input type="radio" id="bed3" name="beds" value="3">
+                        <label for="bed3">3</label>
+                        <input type="radio" id="bed4" name="beds" value="4">
+                        <label for="bed4">4</label>
+                        <input type="radio" id="bed5" name="beds" value="5">
+                        <label for="bed5">5</label>
+                    </div>
+                    <h3>Bathrooms</h3>
+                    <div class="num-choice">
+                        <input type="radio" id="bath1" name="baths" value="1">
+                        <label for="bath1">1</label>
+                        <input type="radio" id="bath2" name="baths" value="2">
+                        <label for="bath2">2</label>
+                        <input type="radio" id="bath3" name="baths" value="3">
+                        <label for="bath3">3</label>
+                        <input type="radio" id="bath4" name="baths" value="4">
+                        <label for="bath4">4</label>
+                        <input type="radio" id="bath5" name="baths" value="5">
+                        <label for="bath5">5</label>
+                    </div>
+                    <h3>Location</h3>
+                    <select name="location" class="location" id="locationList">
+                        <option value="" disabled="disabled" selected="selected">Choose a location</option>
+                        <!-- <option> Gulberg</option>
+                        <option>Anchorage</option> -->
+                    </select>
+                    <!-- <input type="submit" value="Predict Price" class = "btn"> -->
+                    <br><br>
+                   
+                </form>
+                <button class="button" onclick="predictPrice()" type="button">Predict Price</button> 
+                <div id="PredictedPrice" class="result"><h2></h2></div>
+            </div>
+        </div>
+    </body>
+</html>
